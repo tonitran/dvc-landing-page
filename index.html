@@ -1,19 +1,21 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-        <p><b>Future content:</b></p>
-        <ul>
-            <li>Live status check from home page.</li>
-            <li>Requesting room access with a click of a button.</li>
-            <li>IR/Camera snapshot of room.</li>
-            <li>Logging of data and statistical analysis.</li>
-        </ul>
-        <p>Interested in contributing? Contact Toni Tran.</p>
-        <div class="centered">
-            <div class="imgdiv"><img src="dvc.png" height="100%" width="100%"></div>
-            <p>The Pi is online! Check out the door status <a href=http://dvc-raspberrypi.ucsd.edu:5000/door>here.</a></p>
-        </div>
-    </body>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <p><b>Future content:</b></p>
+    <ul>
+        <li>Requesting room access with a click of a button.</li>
+        <li>IR/Camera snapshot of room.</li>
+    </ul>
+    <p>Interested in contributing? Contact Toni Tran.</p>
+    <div class="centered">
+        <div class="imgdiv"><a href="http://www.dvcucsd.com/"><img src="dvc.png" height="100%" width="100%"></a></div>
+        <p>The office is <a id="doorState">...</a></p>
+        <p>View all logs <a href=logs.html>here.</a> (Not implemented yet)</p>
+        <button class="myButton" onclick="requestAccess()">REQUEST ACCESS (NOT IMPLEMENTED)</button>
+    </div>
+</body>
 </html>
