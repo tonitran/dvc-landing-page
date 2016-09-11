@@ -1,71 +1,22 @@
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-</head>
-<body>
-    <p><b>Future content:</b></p>
-    <ul>
-        <li>Requesting room access with a click of a button.</li>
-        <li>IR/Camera snapshot of room.</li>
-    </ul>
-    <p>Interested in contributing? Contact <a href="https://toninutran.wordpress.com/">Toni Tran.</a></p>
-    <canvas id="myChart" width="600" height="600"></canvas>
-    <script>
-
-    // d3.tsv("log.tsv", function(data) {
-    //     console.log(data[0].isOpen);
-    // });
-
-    var ctx = document.getElementById("myChart");
-    var data = {
-        labels: ["A", "B", "C", "D", "E", "F", "G"],
-        datasets: [
-            {
-                label: "Minutes opened",
-                fill: false,
-                lineTension: 0.1,
-                backgroundColor: "rgba(75,192,192,0.4)",
-                borderColor: "rgba(75,192,192,1)",
-                borderCapStyle: 'butt',
-                borderDash: [],
-                borderDashOffset: 0.0,
-                borderJoinStyle: 'miter',
-                pointBorderColor: "rgba(75,192,192,1)",
-                pointBackgroundColor: "#fff",
-                pointBorderWidth: 1,
-                pointHoverRadius: 5,
-                pointHoverBackgroundColor: "rgba(75,192,192,1)",
-                pointHoverBorderColor: "rgba(220,220,220,1)",
-                pointHoverBorderWidth: 2,
-                pointRadius: 1,
-                pointHitRadius: 10,
-                data: [1, 0, 1, 1, 0, 0, 1],
-                spanGaps: false,
-            }
-        ]
-    };
-    var myChart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: {
-            responsive: false,
-            title: {
-                text: "THING"
-            }
-
-        }
-    });
-    </script>
-
-    <div class="centered">
-        <div class="imgdiv"><a href="http://www.dvcucsd.com/"><img src="dvc.png" height="100%" width="100%"></a></div>
-        <p>The office is <a id="doorState">...</a></p>
-        <p>Office last opened at <id="lastOpenTime">X</id> for <id="lastOpenDuration">Y</id> minutes.</p>
-        <button class="myButton" onclick="requestAccess()">REQUEST ACCESS (NOT IMPLEMENTED)</button>
-    </div>
-</body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <p>Interested in contributing? Fork from the repositories and send some pull requests!</p>
+        <p><a href="https://github.com/tonitran/dvc-landing-page">Front-End Repository</a> (What you are seeing on this page)</p>
+        <p><a href="https://github.com/tonitran/dvc-embedded">Back-End Repository</a> (What runs on the Pi)</p>
+        <p>DVC member? Contact <a href=https://toninutran.wordpress.com>Toni Tran</a> to be a contributor.</p>
+        <div class="centered">
+            <div class="imgdiv"><a href="http://www.dvcucsd.com/"><img src="dvc.png" height="100%" width="100%"></a></div>
+            <p>The office is <a id="doorState">...</a></p>
+            <p>Office last opened at <id="lastOpenTime">X</id> for <id="lastOpenDuration">Y</id> minutes.</p>
+            <p>View all logs <a href="logs.html">here.</a></p>
+            <button class="myButton" onclick="requestAccess()">REQUEST ACCESS (NOT IMPLEMENTED)</button>
+        </div>
+    </body>
 </html>
