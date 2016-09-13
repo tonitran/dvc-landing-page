@@ -6,7 +6,11 @@
         <script src="node_modules/chart.js/dist/Chart.bundle.min.js"></script>
     </head>
     <body>
+        <button onClick="shiftDay('prev')">Previous Day</button>
+        <button onClick="shiftDay('today')">Today</button>
+        <button onClick="shiftDay('next')">Next Day</button>
         <div>
+            <p id="chartDate">CURRENT</p>
             <canvas id="myChart" width="1800" height="720"></canvas>
             <script type="text/javascript" src="log-chart.js"></script>
         </div>
