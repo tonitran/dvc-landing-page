@@ -68,6 +68,9 @@ function refreshChart(){
     //Update text
     $('#chartDate').text(chartMonth.toString() + "/" + chartDay.toString() + "/" + chartYear.toString());
 
+    //Begin timing
+    var start = new Date().getTime();
+
     //Make the query
     $.getJSON(`${origin}/logs/${chartYear}/${chartMonth}/${chartDay}`, function(data) {
             $.each(data, function(key, value){
@@ -80,6 +83,12 @@ function refreshChart(){
                     }
                 });
             });
+
+            //Display the time it took to get the data.
+            var end = new Date().getTime();
+            var totalTime = end - start;
+            $('#pollDuration').text(totalTime + ' ms')
+
             // Get JSON callback and update chart.
             console.log(logTimes.length);
             myChart.destroy();
