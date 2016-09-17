@@ -110,7 +110,7 @@ function refreshChart(){
     var toTime = `${date}T${toTime}`;
 
     //Make the query
-    var query = `${origin}/logs?from=${fromTime}&to=${toTime}`
+    var query = `${origin}/device/logs?from=${fromTime}&to=${toTime}`
     $.getJSON(`${query}`, function(data) {
         $.each(data, function(key, value){
             $.each(value, function(key, value){
