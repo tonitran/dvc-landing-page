@@ -1,5 +1,5 @@
-var prod = 'http://dvc-raspberrypi.ucsd.edu:5000';
-var local = 'http://dvc-raspberrypi.local.com:5000';
+var prod = 'http://dvc-raspberrypi.ucsd.edu';
+var local = 'http://dvc-raspberrypi.local.com';
 
 // Set this to change endpoints.
 var origin = prod;
